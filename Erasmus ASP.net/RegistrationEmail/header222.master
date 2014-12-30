@@ -1,0 +1,48 @@
+﻿<%@ Master AutoEventWireup="true"   Inherits="MasterPage" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+       <link href="style.css" rel="stylesheet" />
+        <title>MAP SYSTEM</title>
+</head>
+<body>
+     <header>
+
+
+            <div id='inner'>
+
+                   
+             <nav>
+                <ul class="menu">
+                  <li class="home current"><a href="index.aspx"><span>Home</span></a></li>
+                    <li>
+                      <a href="routes-list.aspx"><span>All routes</span></a>
+                    </li>
+                    
+                      
+                    <li>
+                      <a href="user.aspx"><span>Add routes</span></a>
+                    </li>
+                 
+                 
+                     <li><a href="registration.aspx"><span>Register  </span></a></li>
+                     <li><a href="login.aspx"><span>Login  </span></a></li>
+                      <li><a href="logout.aspx"><span>Logout</span></a></li>
+                              
+                </ul>
+              </nav>          
+            </div>
+        </header>
+
+
+
+<asp:ContentPlaceHolder id="CPH1" runat="server">
+
+
+</asp:ContentPlaceHolder>
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\RegistrationEmail.dll.config
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\RegistrationEmail.dll
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\RegistrationEmail.pdb
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\obj\Debug\aspNet.csprojResolveAssemblyReference.cache
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\obj\Debug\RegistrationEmail.dll
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\obj\Debug\RegistrationEmail.pdb

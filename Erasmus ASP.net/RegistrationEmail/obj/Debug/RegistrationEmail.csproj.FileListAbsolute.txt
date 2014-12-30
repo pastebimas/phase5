@@ -1,0 +1,12 @@
+D:\Linq\RegistrationEmail\RegistrationEmail\bin\RegistrationEmail.dll
+D:\Linq\RegistrationEmail\RegistrationEmail\bin\RegistrationEmail.pdb
+D:\Linq\RegistrationEmail\RegistrationEmail\obj\Debug\RegistrationEmail.csprojResolveAssemblyReference.cache
+D:\Linq\RegistrationEmail\RegistrationEmail\obj\Debug\RegistrationEmail.dll
+D:\Linq\RegistrationEmail\RegistrationEmail\obj\Debug\RegistrationEmail.pdb
+D:\Linq\RegistrationEmail\RegistrationEmail\bin\MySql.Data.dll
+C:\Users\Tautvis\Desktop\ERASMUS\RegistrationEmail\RegistrationEmail\bin\RegistrationEmail.dll.config
+C:\Users\Tautvis\Desktop\ERASMUS\RegistrationEmail\RegistrationEmail\bin\RegistrationEmail.dll
+C:\Users\Tautvis\Desktop\ERASMUS\RegistrationEmail\RegistrationEmail\bin\RegistrationEmail.pdb
+C:\Users\Tautvis\Desktop\ERASMUS\RegistrationEmail\RegistrationEmail\obj\Debug\RegistrationEmail.csprojResolveAssemblyReference.cache
+C:\Users\Tautvis\Desktop\ERASMUS\RegistrationEmail\RegistrationEmail\obj\Debug\RegistrationEmail.dll
+C:\Users\Tautvis\Desktop\ERASMUS\RegistrationEmail\RegistrationEmail\obj\Debug\RegistrationEmail.pdb

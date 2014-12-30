@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="header.Master.cs" Inherits="RegistrationEmail.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Erasmus</title>
+     <link href="style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+      <header>
+
+
+            <div id='inner'>
+
+                  
+             <nav>
+                <ul class="menu">
+                  <li class="home current"><a href="index.aspx"><span>Home</span></a></li>
+                    <li>
+                      <a href="routes-list.aspx"><span>All routes</span></a>
+                    </li>
+                    
+                     <% if ( Session["login"] != null ) { %>
+                        <li>
+                          <a href="user.aspx"><span>Add routes</span></a>
+                        </li>
+                    <% } %>  
+                    
+                 
+                    <% if ( Session["login"] == null ) { %>
+                     <li><a href="registration.aspx"><span>Register  </span></a></li>
+                     <li><a href="login.aspx"><span>Login  </span></a></li>
+
+                    <% } %>  
+                    
+                     <li>
+                      <a href="weather.aspx"><span>Weather</span></a>
+                    </li>
+
+                    <% if ( Session["login"] != null ) { %>
+                        <li><a href="logout.aspx"><span>Logout</span></a></li>
+                    <% } %>  
+                    
+                      
+                              
+                </ul>
+              </nav>          
+            </div>
+        </header>
+
+
+
+<asp:ContentPlaceHolder id="CPH1" runat="server">
+
+
+</asp:ContentPlaceHolder>
+
+</body>
+</html>
