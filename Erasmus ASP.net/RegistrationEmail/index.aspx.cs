@@ -55,8 +55,11 @@ namespace RegistrationEmail
                 MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
       
                 conn.Open();
-                
-              
+
+
+                string finish = "http://skyvoco.com/stop.png";
+                 string startas = "http://skyvoco.com/sportscar.png";
+
                 
                 MySqlCommand cmd = new MySqlCommand(sqlstring, conn);
                  
@@ -66,9 +69,14 @@ namespace RegistrationEmail
                 {
                    // lblJavaScript.Text = sqlstring;
                    // ScriptManager.RegisterStartupScript(this, GetType(), "alert"+i, "alert('" + print["go_from"] + "');", true);
-                //    ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "disp_confirm();", true);
-                //    ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('" + print["go_to"] + "');", true);
-                    ScriptManager.RegisterStartupScript(this, GetType(), "codeAddress"+i, "codeAddress('" + print["go_from"].ToString() + "', "+ i +");", true);
+                   //    ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "disp_confirm();", true);
+                   //    ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('" + print["go_to"] + "');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "codeAddress3" + i, "deleteMarkers();", true);
+                    
+                    ScriptManager.RegisterStartupScript(this, GetType(), "codeAddress" + i, "codeAddress('" + print["go_from"].ToString() + "', " + i + ", '" + startas + "' );", true);
+                    
+                     ScriptManager.RegisterStartupScript(this, GetType(), "codeAddress2" + i, "codeAddress('" + print["go_to"].ToString() + "', " + i + ", '" + finish + "' );", true);
+                   
                     i++;
                 }
                    
