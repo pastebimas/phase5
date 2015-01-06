@@ -39,6 +39,9 @@ namespace RegistrationEmail
                         using (DataTable dt = new DataTable())
                         {
                             sda.Fill(dt);
+                          //  ./string from = dt.Rows[0]["go_from"].ToString;
+                         //   ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('"+sda+"');", true);
+                          //  ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('" + sda['id'] + "');", true);   
                             GridView1.DataSource = dt;
                             GridView1.DataBind();
                             table = dt;
@@ -47,35 +50,35 @@ namespace RegistrationEmail
                 }
             }
 
-            int i = 1;
-            string markers =
-             @"var marker" + i.ToString() + @" = new google.maps.Marker({
-             position: new google.maps.LatLng(54.9247592, 23.9601946)," +
-              @"map: map,
-              title:'Pavadinimas'});";
-
-
-            Literal1.Text = @"
-     <script type='text/javascript'>
-     function initialize() {
-  
-     var mapOptions = {
-     center: new google.maps.LatLng(28.3213, 77.5435),
-     zoom: 2,
-     mapTypeId: google.maps.MapTypeId.ROADMAP
-     };
- 
-     var myMap = new google.maps.Map(document.getElementById('map-canvas'),
-     mapOptions);"
-            + markers +
-            @"}
-     google.maps.event.addDomListener(window, 'load', initialize);
-
-</script>";
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+      
+                conn.Open();
+                
+              
+                
+                MySqlCommand cmd = new MySqlCommand(sqlstring, conn);
+                 
+                MySqlDataReader print = cmd.ExecuteReader();
+                int i = 1;
+                while (print.Read())
+                {
+                   // lblJavaScript.Text = sqlstring;
+                   // ScriptManager.RegisterStartupScript(this, GetType(), "alert"+i, "alert('" + print["go_from"] + "');", true);
+                //    ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "disp_confirm();", true);
+                //    ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('" + print["go_to"] + "');", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "codeAddress"+i, "codeAddress('" + print["go_from"].ToString() + "', "+ i +");", true);
+                    i++;
+                }
+                   
+                
+            }
+            catch (Exception ex)
+            {
+                Literal1.Text = ex.ToString();
+            }
          
-
-            
-            
         }
          
        

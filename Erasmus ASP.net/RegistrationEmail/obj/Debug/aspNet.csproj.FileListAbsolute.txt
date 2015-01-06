@@ -4,3 +4,9 @@ C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\Registrat
 C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\obj\Debug\aspNet.csprojResolveAssemblyReference.cache
 C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\obj\Debug\RegistrationEmail.dll
 C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\obj\Debug\RegistrationEmail.pdb
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\EntityFramework.dll
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\EntityFramework.SqlServer.dll
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\MySql.Data.dll
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\mysql.data.entity.EF6.dll
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\EntityFramework.xml
+C:\Users\Tautvis\Desktop\ERASMUS\ASP.net PHASE 5\RegistrationEmail\bin\EntityFramework.SqlServer.xml

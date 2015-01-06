@@ -4,24 +4,52 @@
 
      <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
-        function initialize() {
-            var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
-            var myLatlng2 = new google.maps.LatLng(-25.563882, 131.044922);
-            var mapOptions = {
-                zoom: 4,
-                center: myLatlng
-            }
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        //function initialize() {
+        //    var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
+        //    var myLatlng2 = new google.maps.LatLng(-25.563882, 131.044922);
+        //    var mapOptions = {
+        //        zoom: 4,
+        //        center: myLatlng
+        //    }
+        //    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: 'Hello World!'
-            });
-            var marker = new google.maps.Marker({
-                position: myLatlng2,
-                map: map,
-                title: 'Hello World!'
+        //    var marker = new google.maps.Marker({
+        //        position: myLatlng,
+        //        map: map,
+        //        title: 'Hello World!'
+        //    });
+        //    var marker = new google.maps.Marker({
+        //        position: myLatlng2,
+        //        map: map,
+        //        title: 'Hello World!'
+        //    });
+        //}
+        //google.maps.event.addDomListener(window, 'load', initialize);
+
+        var geocoder;
+        var map;
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var mapOptions = {
+                zoom: 8,
+                center: latlng
+            }
+            map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        }
+        var markers = [];
+        function codeAddress(address, i ) {
+           // var address = document.getElementById("address").value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                        markers[i] = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
             });
         }
         google.maps.event.addDomListener(window, 'load', initialize);
@@ -56,6 +84,7 @@
     </asp:GridView>
                  
                  <asp:Literal ID="Literal1" runat="server"></asp:Literal> 
+                 <asp:Label ID="lblJavaScript" runat="server" Text=""></asp:Label> 
                 <br /><br />
                 <asp:Button runat="server" ID="btnHelloWorld" OnClick="btnHelloWorld_Click" Text="Search!" />
 
